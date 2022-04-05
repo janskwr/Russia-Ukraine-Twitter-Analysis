@@ -1,13 +1,20 @@
-from config import *
-import tweepy
+# importing libraries and packages
+import snscrape.modules.twitter as sntwitter
+import pandas as pd
 
-client = tweepy.Client(bearer_token=TWITTER_BEARER_TOKEN)
+# Creating list to append tweet data
+tweets_list1 = []
 
-query = 'bucha -is:retweet'
+# Using TwitterSearchScraper to scrape data and append tweets to list
+for i, tweet in enumerate(sntwitter.TwitterSearchScraper(
+        'Bucha since:2022-04-01 until:2022-04-05')
+                                  .get_items()):  # declare a username
+    if i > 100:  # number of tweets you want to scrape
+        break
+    tweets_list1.append(
+        [tweet.date, tweet.id, tweet.content, tweet.user.username])  # declare the attributes to be returned
 
-tweets = client.search_recent_tweets(query=query, tweet_fields=['context_annotations', 'created_at'], max_results=100)
+# Creating a dataframe from the tweets list above
+tweets_df1 = pd.DataFrame(tweets_list1, columns=['Datetime', 'Tweet Id', 'Text', 'Username'])
 
-for tweet in tweets.data:
-    print(tweet.text)
-    if len(tweet.context_annotations) > 0:
-        print(tweet.context_annotations)
+tweets_df1.to_csv('twitter_data1.csv')
