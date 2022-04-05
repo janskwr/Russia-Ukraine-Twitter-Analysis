@@ -27,11 +27,10 @@ for i, tweet in enumerate(sntwitter.TwitterSearchScraper(
          tweet.quoteCount,
          tweet.lang,
          # SOURCE JEST CALKIEM DUZE, POTRZEBUJEMY TEGO??
-         tweet.source,
+         #tweet.source,
          tweet.retweetedTweet,
          tweet.quotedTweet,
-         # W KOLEJNEJ LINIJCE LISTA OBJEKTÓW TYPU USER, JAK ZWROCIC TYLKO USERNAME?
-         # [o.username for o in tweet.mentionedUsers if tweet.mentionedUsers is not None]
+         tweet.mentionedUsers
          ])  # declare the attributes to be returned
 
 # Creating a dataframe from the tweets list above
@@ -44,12 +43,12 @@ tweets_df1 = pd.DataFrame(tweets_list1, columns=['Datetime',
                                                  'Likes Count',
                                                  'Quotes Count',
                                                  'Language',
-                                                 'Source',
+                                                 #'Source',
                                                  'Retweeted Tweet',
                                                  'Quoted Tweet',
-                                                 # JAK OGARNIE KTOS TO mentionedUsers ZEBY TYLKO USERNAMY ZWRACALO TO
-                                                 # MOZNA ODKOMENTOWAC
-                                                 # 'Mentioned Users'
+                                                 'Mentioned Users'
                                                  ])
+tweets_df1['Mentioned Users'] = tweets_df1['Mentioned Users']. \
+                                    apply(lambda x: [o.username for o in x] if(x is not None) else x)
 
 tweets_df1.to_csv('twitter_data1.csv')
