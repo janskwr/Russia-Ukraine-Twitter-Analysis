@@ -1,0 +1,18 @@
+1. Bucha Genocide - 10k tweets - keyword "Bucha" - since 2022.04.03 - until 2022.04.05 - filename "1.0-bucha_10k.csv"
+2. First day of war - 100k tweets - keyword "Ukraine" - since 2022.02.24 - until 2022.02.25 - filename "2.0-russia_invades_ukraine_100k.csv"
+3. FIFA suspends - 10k tweets - keyword "FIFA" - since 2022.02.28 - until 2022.02.29 - filename "3.0-fifa_suspends_10k.csv"
+4. UEFA suspends - 10k tweets - keyword "UEFA" - since 2022.02.28 - until 2022.02.29 - filename "4.0-uefa_suspends_10k.csv"
+5. Apple bans Russia - 10k tweets - keyword "Apple" - since 2022.03.01 - until 2022.03.02 - filename "5.0-apple_ban_10k.csv"
+6. Visa ban - 10k tweets - keyword "Visa" - since 2022.03.01 - until 2022.03.02 - filename "6.0-visa_ban_10k.csv"
+7. Mastercard ban - 10k tweets - keyword "Mastercard" - since 2022.03.01 - until 2022.03.02 - filename "7.0-mastercard_ban_10k.csv"
+8. Ikea ban - 10k tweets - keyword "Ikea" - since 2022.03.03 - until 2022.03.04 - filename "8.0-ikea_ban_10k.csv"
+9. Nike ban - 10k tweets - keyword "Nike" - since 2022.03.03 - until 2022.03.04 - filename "9.0-nike_ban_10k.csv"
+10. Netflix ban - 10k tweets - keyword "Netflix" - since 2022.03.06 - until 2022.03.07 - filename "10.0-netflix_ban_10k.csv"
+11. Tiktok ban - 10k tweets - keyword "Tiktok" - since 2022.03.06 - until 2022.03.07 - filename "11.0-tiktok_ban_10k.csv"
+12. McDonald's ban - 10k tweets - keyword "McDonald's" - since 2022.03.08 - until 2022.03.09 - filename "12.0-mcdonalds_ban_10k.csv"
+13. SWIFT ban - 50k tweets - keyword "SWIFT" - since 2022.03.02 - until 2022.03.03 - filename "13.0-swift_ban_50k.csv"
+14. MEPs - 2k per MEP - 'from:'+name+' since:2020-02-23 until:2022-04-12 lang:en' - filename ‘14.0-twitter_MEPs_2k_2y.csv’
+Before_war - 100k tweets - keyword Ukraine - since 2022.02.22 - until 2022.02.22 - filename ‘15.0-twitter_Ukraine_02_22’
+16. Russian Twitter - 100k tweets (max) - keyword Ukraine - since 2022.02.24 - until 2022.02.25 - lang: ru - filename ‘16.0-russian_twitter_firstday_100k.csv’
+17. Middle_of_2021 - 200k tweets - 'Ukraine since:2021-03-01 until:2021-09-01 lang:en' - filename ‘17.0-twitter_control_sample_200k_2021.csv’
+
