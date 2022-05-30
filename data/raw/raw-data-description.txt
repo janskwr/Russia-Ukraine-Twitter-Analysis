@@ -16,3 +16,7 @@ Before_war - 100k tweets - keyword Ukraine - since 2022.02.22 - until 2022.02.22
 16. Russian Twitter - 100k tweets (max) - keyword Ukraine - since 2022.02.24 - until 2022.02.25 - lang: ru - filename ‘16.0-russian_twitter_firstday_100k.csv’
 17. Middle_of_2021 - 200k tweets - 'Ukraine since:2021-03-01 until:2021-09-01 lang:en' - filename ‘17.0-twitter_control_sample_200k_2021.csv’
 
+DIRECTORIES:
+1. 'week_approach1' - small sample of tweets from the first week of war (for testing)
+2. 'whole_day' - all tweets in English language with keyword 'Ukraine' (21.02.2022 - 04.03.2022)
+
