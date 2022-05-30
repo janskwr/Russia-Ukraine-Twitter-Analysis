@@ -72,7 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![EDA Screen Shot][product-screenshot]](https://www.youtube.com/watch?v=-KQpq4-2Qdk)
 
 This repository contains advanced NLP analysis of tweets written during the first week of Russian invasion of Ukraine. We scraped over 10 million tweets from the first week of Russian invasion (check our data directory) and performed advanced topic modelling on them using BERTopic. We also developed an interactive application with Streamlit with some cool visualizations. 
 
@@ -171,4 +171,4 @@ Project Link: [https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis](https
 [license-url]: https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jan-skwarek-87b01419b/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: reports/figures/eda1.png
