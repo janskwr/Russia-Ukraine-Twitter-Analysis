@@ -136,7 +136,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for mor
 
 * [Jan Skwarek](https://github.com/janskwr)
 * [Jakub Kozieł](https://github.com/jakubkoziel)
-* [Tomasz Nocoń](https://www.youtube.com/watch?v=-KQpq4-2Qdk)
+* [Tomasz Nocoń](https://github.com/TomekNocon)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
