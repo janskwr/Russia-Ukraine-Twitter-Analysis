@@ -72,7 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![EDA Screen Shot][product-screenshot]](https://www.youtube.com/watch?v=-KQpq4-2Qdk)
+[![EDA Screen Shot][product-screenshot]]([https://share.streamlit.io/jakubkoziel/russia-ukraine-twitter-analysis/streamlit-app/src/visualization/app.py])
 
 This repository contains advanced NLP analysis of tweets written during the first week of Russian invasion of Ukraine. We scraped over 10 million tweets from the first week of Russian invasion (check our data directory) and performed advanced topic modelling on them using BERTopic. We also developed an interactive application with Streamlit with some cool visualizations. 
 
@@ -99,7 +99,7 @@ This section lists some major frameworks/libraries used in our project. You don'
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To use our app, please click on [this](https://www.youtube.com/watch?v=-KQpq4-2Qdk) link!
+To use our app, please click on [this](https://share.streamlit.io/jakubkoziel/russia-ukraine-twitter-analysis/streamlit-app/src/visualization/app.py) link!
 
 _For more examples, please refer to the [Presentation](https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis/blob/master/reports/8_4_WarInUkraine-TwitterAnalysis.mp4)_
 
@@ -145,7 +145,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for mor
 <!-- CONTACT -->
 ## Contact
 * Jan Skwarek - janskwarek@protonmail.ch - [Instagram](https://www.instagram.com/janskwr/) - [Facebook](https://www.facebook.com/jan.skwarek) - [LinkedIn](https://www.linkedin.com/in/jan-skwarek-87b01419b/)
-* Jakub Kozieł
+* Jakub Kozieł - jakub.koziel@interia.pl - [LinkedIn](https://www.linkedin.com/in/koziel-jakub/)
 * Tomasz Nocoń
 
 Project Link: [https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis](https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis)
@@ -171,4 +171,4 @@ Project Link: [https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis](https
 [license-url]: https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jan-skwarek-87b01419b/
-[product-screenshot]: reports/figures/eda1.png
+[product-screenshot]: https://user-images.githubusercontent.com/56126916/171753735-83d5098e-0ba2-4ab8-991a-7edc8a3f6551.png
