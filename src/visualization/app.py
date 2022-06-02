@@ -12,39 +12,38 @@ import csv
 import streamlit.components.v1 as components
 
 
-# def _max_width_(prcnt_width:int = 125):
-#     max_width_str = f"max-width: {prcnt_width}%;"
-#     st.markdown(f"""
-#                 <style>
-#                 .reportview-container .main .block-container{{{max_width_str}}}
-#                 </style>
-#                 """,
-#                 unsafe_allow_html=True,
-#     )
+st.set_page_config(layout="wide")
 
 
 @st.cache(allow_output_mutation=True)
 def load_data():
-    names_counts = ['../counts/feb21_counts.csv',
-                    '../counts/feb22_counts.csv',
-                    '../counts/feb23_counts.csv',
-                    '../counts/feb24_counts.csv',
-                    '../counts/feb25_counts.csv',
-                    '../counts/feb26_counts.csv',
-                    '../counts/feb27_counts.csv',
-                    '../counts/feb28_counts.csv',
-                    '../counts/mar01_counts.csv',
-                    '../counts/mar02_counts.csv',
-                    '../counts/mar03_counts.csv']
+    names_counts = ['./counts/feb21_counts.csv',
+                    './counts/feb22_counts.csv',
+                    './counts/feb23_counts.csv',
+                    './counts/feb24_counts.csv',
+                    './counts/feb25_counts.csv',
+                    './counts/feb26_counts.csv',
+                    './counts/feb27_counts.csv',
+                    './counts/feb28_counts.csv',
+                    './counts/mar01_counts.csv',
+                    './counts/mar02_counts.csv',
+                    './counts/mar03_counts.csv']
     l = []
     for name in names_counts:
 
-        d = {}
-        data_tmp = pd.read_csv(name, sep=',', encoding='utf-8', names=['ngram', 'num'])
+        #d = {}
+        data_tmp = pd.read_csv(name, sep=',', encoding='utf-8', names=['ngram', 'num'], dtype={'ngram': 'str', 'num': 'Int64'})
+        data_tmp = data_tmp.dropna()
+        # for i, row in data_tmp.iterrows():
+        #
+        #
+        #     if row['num'] != None:
+        #         d[row['ngram']] = row['num']
 
-        for i, row in data_tmp.iterrows():
-            d[row['ngram']] = row['num']
+        d = dict(zip(data_tmp['ngram'], data_tmp['num']))
+
         l.append(Counter(d))
+
 
     all_l = Counter()
     for el in l:
@@ -55,25 +54,28 @@ def load_data():
 
 @st.cache(allow_output_mutation=True)
 def load_data_bigrams():
-    names_counts = ['../bigrams/feb21_bigrams.csv',
-                    '../bigrams/feb22_bigrams.csv',
-                    '../bigrams/feb23_bigrams.csv',
-                    '../bigrams/feb24_bigrams.csv',
-                    '../bigrams/feb25_bigrams.csv',
-                    '../bigrams/feb26_bigrams.csv',
-                    '../bigrams/feb27_bigrams.csv',
-                    '../bigrams/feb28_bigrams.csv',
-                    '../bigrams/mar01_bigrams.csv',
-                    '../bigrams/mar02_bigrams.csv',
-                    '../bigrams/mar03_bigrams.csv']
+    names_counts = ['./bigrams/feb21_bigrams.csv',
+                    './bigrams/feb22_bigrams.csv',
+                    './bigrams/feb23_bigrams.csv',
+                    './bigrams/feb24_bigrams.csv',
+                    './bigrams/feb25_bigrams.csv',
+                    './bigrams/feb26_bigrams.csv',
+                    './bigrams/feb27_bigrams.csv',
+                    './bigrams/feb28_bigrams.csv',
+                    './bigrams/mar01_bigrams.csv',
+                    './bigrams/mar02_bigrams.csv',
+                    './bigrams/mar03_bigrams.csv']
     l = []
     for name in names_counts:
         # print(name)
         d = {}
-        data_tmp = pd.read_csv(name, sep=',', encoding='utf-8', names=['ngram', 'num'], quoting=csv.QUOTE_NONE)
+        data_tmp = pd.read_csv(name, sep=',', encoding='utf-8', names=['ngram', 'num'], quoting=csv.QUOTE_NONE, dtype={'ngram': 'str', 'num': 'Int64'})
+        data_tmp = data_tmp.dropna()
 
-        for i, row in data_tmp.iterrows():
-            d[row['ngram']] = row['num']
+        # for i, row in data_tmp.iterrows():
+        #     d[row['ngram']] = row['num']
+
+        d = dict(zip(data_tmp['ngram'], data_tmp['num']))
         l.append(Counter(d))
 
     all_l = Counter()
@@ -81,6 +83,7 @@ def load_data_bigrams():
         all_l += el
 
     return l, all_l
+
 
 
 def plot_all_time(start, stop, data, all_l, option_date, filter_words):
@@ -125,6 +128,7 @@ def plot_all_time(start, stop, data, all_l, option_date, filter_words):
 
     col1, col2 = st.columns([5, 1])
     col1.pyplot(fig)
+
 
 
 def plot_without_all(start, stop, data, all_l, option_date, filter_words):
@@ -188,7 +192,7 @@ st.header('Numerosity based')
 
 data, all_l = load_data()
 
-data_b, all_b = load_data_bigrams()
+#data_b, all_b = load_data_bigrams()
 
 st.subheader('All time trends')
 st.write('Plots most popular words')
