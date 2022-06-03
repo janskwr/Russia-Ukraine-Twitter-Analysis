@@ -145,7 +145,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for mor
 <!-- CONTACT -->
 ## Contact
 * Jan Skwarek - janskwarek@protonmail.ch - [Instagram](https://www.instagram.com/janskwr/) - [Facebook](https://www.facebook.com/jan.skwarek) - [LinkedIn](https://www.linkedin.com/in/jan-skwarek-87b01419b/)
-* Jakub Kozieł - jakub.koziel@interia.pl - [LinkedIn](https://www.linkedin.com/in/koziel-jakub/)
+* Jakub Kozieł - [LinkedIn](https://www.linkedin.com/in/koziel-jakub/)
 * Tomasz Nocoń
 
 Project Link: [https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis](https://github.com/janskwr/Russia-Ukraine-Twitter-Analysis)
